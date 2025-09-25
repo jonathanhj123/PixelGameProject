@@ -1,0 +1,14 @@
+.button {
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/determination.ttf?fileID=12800000&guid=9248a3617d9a55b41b7c414b968583bc&type=3#determination");
+    -unity-font-style: bold;
+    background-color: rgba(55, 55, 55, 0);
+    background-image: url("project://database/Assets/Simple%20Buttons/Big%20Buttons/BigPink.png?fileID=21300000&guid=5f4b5e4d7ee5eb14e97739815339826f&type=3#BigPink");
+    width: 100px;
+    height: 45px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    -unity-slice-scale: 1px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}

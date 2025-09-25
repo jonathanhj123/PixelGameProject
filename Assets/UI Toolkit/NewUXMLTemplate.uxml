@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Quiz%20Window.uss?fileID=7433441132597879392&amp;guid=184cadb044e77a942b2ba57e26a51933&amp;type=3#Quiz Window" />
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:GroupBox style="align-items: center; justify-content: center; align-self: center; align-content: auto; flex-direction: row-reverse; flex-wrap: wrap; width: 302px; transform-origin: bottom; height: 100px; margin-bottom: 90px; visibility: visible; overflow: visible; display: flex; -unity-background-image-tint-color: rgba(56, 56, 56, 0); background-color: rgba(0, 0, 0, 0); border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0);">
+        <ui:Button text="Button" data-source="project://database/Assets/InputSystem_Actions.inputactions?fileID=6564999863303420839&amp;guid=2bcd2660ca9b64942af0de543d8d7100&amp;type=3#UI/TrackedDevicePosition" class="button" style="width: 100px; height: 45px;" />
+        <ui:Button text="Button" class="button" style="width: 100px; height: 45px;" />
+        <ui:Button text="Button" class="button" style="width: 100px; height: 45px;" />
+        <ui:Button text="Button" class="button" />
+    </ui:GroupBox>
+</ui:UXML>
