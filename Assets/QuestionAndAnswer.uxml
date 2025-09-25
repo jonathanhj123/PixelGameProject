@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Buttonanswers.uss?fileID=7433441132597879392&amp;guid=64d05e8cc9ddbad438b89de018cfe6fa&amp;type=3#Buttonanswers" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Før du kan komme forbi skal du svare på dette spørgsmål" name="Question" style="background-color: rgba(255, 255, 255, 0); align-items: auto; align-content: flex-start; width: 201px; justify-content: center; align-self: center; -unity-text-align: upper-center; border-bottom-width: 34px; transform-origin: center; -unity-slice-type: sliced; background-position-x: center 0; top: 71px; left: 42px; right: auto; bottom: auto; position: absolute; display: flex; overflow: visible; height: 107px; white-space: normal; -unity-font-style: normal; background-image: url(&quot;project://database/Assets/sprites/pngtree-chat-bubble-pixels-vector-png-image_11876211.png?fileID=2800000&amp;guid=ebc4c547f76c72d448c638ab736d4097&amp;type=3#pngtree-chat-bubble-pixels-vector-png-image_11876211&quot;); background-repeat: no-repeat no-repeat; border-left-width: 29px; border-right-width: 27px; border-top-width: 15px;" />
+    </ui:VisualElement>
+    <ui:GroupBox style="flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: auto; align-self: center; width: 321px; align-items: flex-start; border-bottom-width: 70px;">
+        <ui:Button text="Svar 1" name="Answer1" class="button" style="white-space: normal; font-size: 14px;" />
+        <ui:Button text="Svar 2" name="Answer2" class="button" style="white-space: normal;" />
+        <ui:Button text="Svar 3" name="Answer3" class="button" style="white-space: normal;" />
+        <ui:Button text="Svar 4" name="Answer4" class="button" style="white-space: normal;" />
+    </ui:GroupBox>
+</ui:UXML>
