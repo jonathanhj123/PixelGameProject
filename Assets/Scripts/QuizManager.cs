@@ -11,6 +11,9 @@ public class QuizManager : MonoBehaviour
     private Label _label;
     private int _rightAnswerIndex = 3;
     private QuestionsAndAnswers[] QNA = new QuestionsAndAnswers[4];
+    private int _rightAnswers = 0;
+    private int _wrongAnswers = 0;
+    private bool _hasAnswered = false;
     void Start()
     {
 
@@ -32,11 +35,17 @@ public class QuizManager : MonoBehaviour
     public void rightAnswer()
     {
         Debug.Log("Rigtigt Svar");
+        rightAnswer++;
+        _hasAnswered = true;
+        // Make visuals for the player to see if its correct or not
     }
 
     public void wrongAnswer()
     {
         Debug.Log("Forkert svar");
+        wrongAnswer++;
+        _hasAnswered = true;
+        // Make visuals for the player to see if its correct or not
     }
 
     void setQuestionAndAswers(QuestionsAndAnswers qna)
