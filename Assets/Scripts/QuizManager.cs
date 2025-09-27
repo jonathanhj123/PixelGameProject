@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class QuizManager : MonoBehaviour
     private VisualElement _root;
     private Button[] _button = new Button[4];
     private Label _label;
-    private QuestionsAndAnswers[] QNA = new QuestionsAndAnswers[4];
+    private List<QuestionsAndAnswers> QNA = new List<QuestionsAndAnswers>();
     private int _rightAnswers = 0;
     private int _wrongAnswers = 0;
     private bool _hasAnswered = false;
@@ -22,10 +23,11 @@ public class QuizManager : MonoBehaviour
     void Awake()
     {
         quiz = GameObject.FindWithTag("UIDoc");
-        QNA[0] = new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0);
-        QNA[1] = new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1);
-        QNA[2] = new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2);
-        QNA[3] = new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3);
+        QNA.Add(new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0));
+        QNA.Add(new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1));
+        QNA.Add(new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2));
+        QNA.Add(new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3));
+
         
         _root = quiz.GetComponent<UIDocument>().rootVisualElement;
         _label = _root.Q<Label>("Question");
@@ -37,7 +39,8 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
 
-        setQuestionAndAswers(QNA[Random.Range(0, QNA.Length)]);
+       // setQuestionAndAswers(QNA[Random.Range(0, QNA.Length)]);
+        setQuestionAndAswers(QNA[Random.Range(0, QNA.Count)]);
     }
 
     void Update()
@@ -48,6 +51,7 @@ public class QuizManager : MonoBehaviour
             if (_wrongAnswers >= 2)
             {
                 GameOver();
+                _wrongAnswers = 0;
             }
             else
             {
@@ -57,6 +61,7 @@ public class QuizManager : MonoBehaviour
         if (_wrongAnswers >= 2)
         {
             GameOver();
+            _wrongAnswers = 0;
         }
         if (_hasAnswered)
         {
@@ -67,7 +72,7 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                setQuestionAndAswers(QNA[Random.Range(0, QNA.Length)]);
+                setQuestionAndAswers(QNA[Random.Range(0, QNA.Count)]);
                 _hasAnswered = false;
                 _wait = 0;
             }
@@ -120,13 +125,14 @@ public class QuizManager : MonoBehaviour
     }
     void GameOver()
     {
-
+        quiz.SetActive(false);
         // Game over screen, tabt.
-        //Debug.Log("Game over");
+        Debug.Log("Game over");
     }
     void WinGame()
     {
+        quiz.SetActive(false);
         // Vis skærm med win¨
-        // Debug.Log("Win game");
+        Debug.Log("Win game");
     }
 }
