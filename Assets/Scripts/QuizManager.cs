@@ -15,17 +15,19 @@ public class QuizManager : MonoBehaviour
     private int _wrongAnswers = 0;
     private bool _hasAnswered = false;
     private int _questionAmount = 0;
-    private float _timer = 2;
+    [SerializeField]private float _timer = 2;
     private float _wait = 0;
+    private GameObject quiz;
 
     void Awake()
     {
+        quiz = GameObject.FindWithTag("UIDoc");
         QNA[0] = new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0);
         QNA[1] = new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1);
         QNA[2] = new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2);
         QNA[3] = new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3);
-
-        _root = GetComponent<UIDocument>().rootVisualElement;
+        
+        _root = quiz.GetComponent<UIDocument>().rootVisualElement;
         _label = _root.Q<Label>("Question");
         _button[0] = _root.Q<Button>("Answer1");
         _button[1] = _root.Q<Button>("Answer2");
@@ -45,17 +47,16 @@ public class QuizManager : MonoBehaviour
         {
             if (_wrongAnswers >= 2)
             {
-                gameOver();
+                GameOver();
             }
             else
             {
-                winGame();
+                WinGame();
             }
         }
         if (_wrongAnswers >= 2)
         {
-            gameOver();
-
+            GameOver();
         }
         if (_hasAnswered)
         {
@@ -68,12 +69,13 @@ public class QuizManager : MonoBehaviour
             {
                 setQuestionAndAswers(QNA[Random.Range(0, QNA.Length)]);
                 _hasAnswered = false;
+                _wait = 0;
             }
         }
 
     }
 
-    public void rightAnswer()
+    public void RightAnswer()
     {
         _questionAmount++;
         _hasAnswered = true;
@@ -84,7 +86,7 @@ public class QuizManager : MonoBehaviour
         // Make visuals for the player to see if its correct or not
     }
 
-    public void wrongAnswer()
+    public void WrongAnswer()
     {
         _questionAmount++;
         _hasAnswered = true;
@@ -102,26 +104,27 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             _button[i].text = qna._answers[i];
-            _button[i].clicked -= rightAnswer;
-            _button[i].clicked -= wrongAnswer;
+            _button[i].clicked -= RightAnswer;
+            _button[i].clicked -= WrongAnswer;
 
             if (i == qna.RightAnswerIndex)
             {
-                _button[i].clicked += rightAnswer;
+                _button[i].clicked += RightAnswer;
 
             }
             else
             {
-                _button[i].clicked += wrongAnswer;
+                _button[i].clicked += WrongAnswer;
             }
         }
     }
-    void gameOver()
+    void GameOver()
     {
+
         // Game over screen, tabt.
         //Debug.Log("Game over");
     }
-    void winGame()
+    void WinGame()
     {
         // Vis skærm med win¨
         // Debug.Log("Win game");
