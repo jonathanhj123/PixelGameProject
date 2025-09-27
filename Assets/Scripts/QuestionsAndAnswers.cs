@@ -22,11 +22,6 @@ public class QuestionsAndAnswers : MonoBehaviour
 
     }
 
-    public QuestionsAndAnswers generateQuestion(String question, String answer1, String answer2, String answer3, String answer4, int rightAnswerIndex)
-    {
-        String[] answer = { answer1, answer2, answer3, answer4 };
-        return new QuestionsAndAnswers(question, answer, rightAnswerIndex);
-    }
 
     public int getRightAnswerIndex()
     {
