@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Docs/Buttonanswers.uss?fileID=7433441132597879392&amp;guid=64d05e8cc9ddbad438b89de018cfe6fa&amp;type=3#Buttonanswers" />
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:GroupBox style="right: 0; bottom: 0; left: 0; top: 122px; position: absolute; font-size: 14px;">
+        <ui:Label text="You Win" style="font-size: 41px; align-content: auto; align-items: flex-start; justify-content: flex-start; align-self: center; -unity-text-align: upper-center; text-overflow: clip; bottom: 0; left: 0; top: 0; right: 0;" />
+        <ui:GroupBox style="top: auto; white-space: normal; align-self: center; align-content: auto; align-items: auto;">
+            <ui:Button text="Næste Bane" class="button" style="white-space: normal;" />
+            <ui:Button text="Main Menu" class="button" style="-unity-text-align: middle-center; display: flex; white-space: normal; position: relative; top: auto; left: auto; right: auto; bottom: auto;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

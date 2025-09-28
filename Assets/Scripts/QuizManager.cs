@@ -18,18 +18,22 @@ public class QuizManager : MonoBehaviour
     private int _questionAmount = 0;
     [SerializeField]private float _timer = 2;
     private float _wait = 0;
-    private GameObject quiz;
+    private GameObject _quiz;
+    private GameObject _gameOver;
+    private GameObject _win;
 
     void Awake()
     {
-        quiz = GameObject.FindWithTag("UIDoc");
+        _quiz = GameObject.FindWithTag("UIDoc");
+        _gameOver = GameObject.FindWithTag("GameOver");
+        _win = GameObject.FindWithTag("Win");
         QNA.Add(new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0));
         QNA.Add(new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1));
         QNA.Add(new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2));
         QNA.Add(new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3));
 
         
-        _root = quiz.GetComponent<UIDocument>().rootVisualElement;
+        _root = _quiz.GetComponent<UIDocument>().rootVisualElement;
         _label = _root.Q<Label>("Question");
         _button[0] = _root.Q<Button>("Answer1");
         _button[1] = _root.Q<Button>("Answer2");
@@ -125,14 +129,14 @@ public class QuizManager : MonoBehaviour
     }
     void GameOver()
     {
-        quiz.SetActive(false);
-        // Game over screen, tabt.
+        _quiz.SetActive(false);
+        _gameOver.SetActive(true);
         Debug.Log("Game over");
     }
     void WinGame()
     {
-        quiz.SetActive(false);
-        // Vis skærm med win¨
+        _quiz.SetActive(false);
+        _win.SetActive(true);
         Debug.Log("Win game");
     }
 }

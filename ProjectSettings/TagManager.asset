@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - UIDoc
+  - GameOver
+  - Win
   layers:
   - Default
   - TransparentFX
