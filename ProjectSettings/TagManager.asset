@@ -7,6 +7,8 @@ TagManager:
   - UIDoc
   - GameOver
   - Win
+  - WinTag
+  - MainMenuUI
   layers:
   - Default
   - TransparentFX

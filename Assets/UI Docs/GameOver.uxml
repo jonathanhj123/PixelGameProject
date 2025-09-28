@@ -4,8 +4,8 @@
     <ui:GroupBox style="right: 0; bottom: 0; left: 0; top: 122px; position: absolute; font-size: 14px;">
         <ui:Label text="Game Over" style="font-size: 41px; align-content: auto; align-items: flex-start; justify-content: flex-start; align-self: center; -unity-text-align: upper-center; text-overflow: clip; bottom: 0; left: 0; top: 0; right: 0;" />
         <ui:GroupBox style="top: auto; white-space: normal; align-self: center; align-content: auto; align-items: auto;">
-            <ui:Button text="Prøv Igen" class="button" style="white-space: normal;" />
-            <ui:Button text="Main Menu" class="button" style="-unity-text-align: middle-center; display: flex; white-space: normal; position: relative; top: auto; left: auto; right: auto; bottom: auto;" />
+            <ui:Button text="Prøv Igen" name="TryAgain" class="button" style="white-space: normal;" />
+            <ui:Button text="Main Menu" name="MainMenu" class="button" style="-unity-text-align: middle-center; display: flex; white-space: normal; position: relative; top: auto; left: auto; right: auto; bottom: auto;" />
         </ui:GroupBox>
     </ui:GroupBox>
 </ui:UXML>

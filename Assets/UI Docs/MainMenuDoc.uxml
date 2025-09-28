@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:Label text="Main Menu" style="flex-wrap: wrap; align-items: auto; align-self: center; align-content: auto; justify-content: center; top: -316px; font-size: 36px;" />
+    <ui:GroupBox style="bottom: 227px;">
+        <ui:Button text="Start Game" name="StartButton" style="font-size: 30px;" />
+    </ui:GroupBox>
+</ui:UXML>
