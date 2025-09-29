@@ -18,7 +18,7 @@ public class QuizManager : MonoBehaviour
     private UIDocument _quizUI;
     private Button[] _button = new Button[4];
     private Label _label;
-    private List<QuestionsAndAnswers> QNA = new List<QuestionsAndAnswers>();
+    private List<QuestionsAndAnswers> _QNA = new List<QuestionsAndAnswers>();
     private int _rightAnswers = 0;
     private int _wrongAnswers = 0;
     private bool _hasAnswered = false;
@@ -41,35 +41,35 @@ public class QuizManager : MonoBehaviour
         // Tilføjer alle spørgsmål i vores QNA liste som er en liste af objektet QuestionsAndAnswers som ligge i det andet script
 
         // Kalmarunionen
-        QNA.Add(new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0));
-        QNA.Add(new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1));
-        QNA.Add(new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2));
-        QNA.Add(new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvem var hovedarkitekten bag Kalmarunionen?", new string[] { "Droning Margrete 1", "Dronning Margrete springhest", "Christian 1", "Valdemar Atterdag" }, 0));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken periode eksisterede Kalmarunionen? ", new string[] { "1400-1523", "1397-1523", "1423-1597", "1288-1434" }, 1));
+        _QNA.Add(new QuestionsAndAnswers("Hvem var dronning Margrete 1. gift med?", new string[] { "Henry 4 af England", "Christian 1. af Danmark", "Kong Haakon 6 af Norge.", "Magnus Eriksson af Sverige" }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Hvor længe varede rigsfællesskabet mellem Norge og Danmark?", new string[] { "1648", "1918", "1550", "1814" }, 3));
         // Christian 4.
-        QNA.Add(new QuestionsAndAnswers("Hvilken styreform havde Danmark under Christian 4.?", new string[] { "Enevælde", "Demokrati", "Adelsvælde", "Teokrati" }, 2));
-        QNA.Add(new QuestionsAndAnswers("Hvilken krig deltog Christian 4. i 1625?", new string[] { "Svenskekrigene", "Torstenssonfejden", "3 års krigen", "Trediveårskrigen" }, 3));
-        QNA.Add(new QuestionsAndAnswers("Hvad mistede Christian 4. under Torstenssonfejden (1643-45)?", new string[] { "Sin højre arm", "Synet på sit højre øje", "Sit venstre ben", "Sin venstre hånd" }, 1));
-        QNA.Add(new QuestionsAndAnswers("Hvor lang var Christian 4. regeringstid?", new string[] { "52 år", "60 år", "45 år", "36 år" }, 0));
-        QNA.Add(new QuestionsAndAnswers("Hvem var Christian 4. i krig mod i 1625?", new string[] { "Den franske kong", "Den engelske dronning", "Greven af Venedig", "Den tysk-romersk kejser" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken styreform havde Danmark under Christian 4.?", new string[] { "Enevælde", "Demokrati", "Adelsvælde", "Teokrati" }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken krig deltog Christian 4. i 1625?", new string[] { "Svenskekrigene", "Torstenssonfejden", "3 års krigen", "Trediveårskrigen" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvad mistede Christian 4. under Torstenssonfejden (1643-45)?", new string[] { "Sin højre arm", "Synet på sit højre øje", "Sit venstre ben", "Sin venstre hånd" }, 1));
+        _QNA.Add(new QuestionsAndAnswers("Hvor lang var Christian 4. regeringstid?", new string[] { "52 år", "60 år", "45 år", "36 år" }, 0));
+        _QNA.Add(new QuestionsAndAnswers("Hvem var Christian 4. i krig mod i 1625?", new string[] { "Den franske kong", "Den engelske dronning", "Greven af Venedig", "Den tysk-romersk kejser" }, 3));
 
         // Statskuppet 1660
-        QNA.Add(new QuestionsAndAnswers("Hvad var en af årsagerne til at de gejstlige og borgerne forslog statskuppet (1660)?", new string[] { "De var træt af kongens magt", "De vil selv havde magten", "De ville give magten til svenskerne", "De var trætte af rigsrådets magt og af adlens mange privilegier" }, 3));
-        QNA.Add(new QuestionsAndAnswers("Hvilken styreform overgik Danmark til efter statskuppet (1660)?", new string[] { "Demokrati", "Enevælde", "Diktatur", "Adelsvælde" }, 1));
-        QNA.Add(new QuestionsAndAnswers("Hvilken konge var med til statskuppet?", new string[] { "Christian 5.", "Valdemar Atterdag", "Frederik 3.", "Christian 4." }, 2));
-        QNA.Add(new QuestionsAndAnswers("Efter svenskekrigene 1657-1660, hvilket områder mistede Danmark-Norge?", new string[] { "Skåne, Halland og Blekinge", "Slesvig-Holsten", "De dansk vestindiske øer", "Norge" }, 0));
-        QNA.Add(new QuestionsAndAnswers("Hvem var en af drivkræfterne i diskussionen om enevælde?", new string[] { "Theodor Zhale", "Curfitz Ulfeldt", "Hans Zimmerman", "Peder Schumacher (Griffenfeldt)" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvad var en af årsagerne til at de gejstlige og borgerne forslog statskuppet (1660)?", new string[] { "De var træt af kongens magt", "De vil selv havde magten", "De ville give magten til svenskerne", "De var trætte af rigsrådets magt og af adlens mange privilegier" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken styreform overgik Danmark til efter statskuppet (1660)?", new string[] { "Demokrati", "Enevælde", "Diktatur", "Adelsvælde" }, 1));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken konge var med til statskuppet?", new string[] { "Christian 5.", "Valdemar Atterdag", "Frederik 3.", "Christian 4." }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Efter svenskekrigene 1657-1660, hvilket områder mistede Danmark-Norge?", new string[] { "Skåne, Halland og Blekinge", "Slesvig-Holsten", "De dansk vestindiske øer", "Norge" }, 0));
+        _QNA.Add(new QuestionsAndAnswers("Hvem var en af drivkræfterne i diskussionen om enevælde?", new string[] { "Theodor Zhale", "Curfitz Ulfeldt", "Hans Zimmerman", "Peder Schumacher (Griffenfeldt)" }, 3));
 
         // Grundloven
-        QNA.Add(new QuestionsAndAnswers("Hvilken kong underskrev grundloven?", new string[] { "Frederik 7.", "Christian 7.", "Christian 5.", "Frederik 6." }, 0));
-        QNA.Add(new QuestionsAndAnswers("Hvem havde stemmeret i forhold til Grundloven fra 1849?", new string[] { "Mænd og kvinder", "Alle mænd", "Mænd over 30 år", "Adlen" }, 2));
-        QNA.Add(new QuestionsAndAnswers("Ved indførelsen af grundloven var der en gruppe der ikke kunne stemme også kendt som de 5 f'er, Fruentimmere (kvinder), forbryder, folkehold (tjenestefolk og almuen) og fattige, hvad hed den sidste?", new string[] { "Fremmede", "Fængslede", "Forskere", "Fjollede" }, 3));
-        QNA.Add(new QuestionsAndAnswers("Hvor stor procentdel af den danske befolkning kunne stemme i 1849?", new string[] { "34%", "14%", "12%", "8%" }, 1));
-        QNA.Add(new QuestionsAndAnswers("Hvilken af disse rettigheder fik danskerne i 1849?", new string[] { "Abort frihed", "Forsamlingsfrihed", "Kvinders stemmeret", "Stemmeret til 18 år" }, 1));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken kong underskrev grundloven?", new string[] { "Frederik 7.", "Christian 7.", "Christian 5.", "Frederik 6." }, 0));
+        _QNA.Add(new QuestionsAndAnswers("Hvem havde stemmeret i forhold til Grundloven fra 1849?", new string[] { "Mænd og kvinder", "Alle mænd", "Mænd over 30 år", "Adlen" }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Ved indførelsen af grundloven var der en gruppe der ikke kunne stemme også kendt som de 5 f'er, Fruentimmere (kvinder), forbryder, folkehold (tjenestefolk og almuen) og fattige, hvad hed den sidste?", new string[] { "Fremmede", "Fængslede", "Forskere", "Fjollede" }, 3));
+        _QNA.Add(new QuestionsAndAnswers("Hvor stor procentdel af den danske befolkning kunne stemme i 1849?", new string[] { "34%", "14%", "12%", "8%" }, 1));
+        _QNA.Add(new QuestionsAndAnswers("Hvilken af disse rettigheder fik danskerne i 1849?", new string[] { "Abort frihed", "Forsamlingsfrihed", "Kvinders stemmeret", "Stemmeret til 18 år" }, 1));
 
         // Genforeningen / Påskekrisen
-        QNA.Add(new QuestionsAndAnswers("Hvorfor sagde man at kongen var ved at begå statskup (1920)?", new string[] { "kongen ville genindføre enevældet", "Kongen ville sælge Grønland", "Kongen afsked Zahle regeringen", "Kongen ville i krig" }, 2));
-        QNA.Add(new QuestionsAndAnswers("Hvad var Zahle regeringens ønske med en ny grænse?", new string[] { "En grænse efter nationalitet", "Danmark til Ejderen", "At Danmark skulle være en del af Tyskland", "At grænsen skulle blive hvor den var" }, 0));
-        QNA.Add(new QuestionsAndAnswers("Hvad truede de socialdemokratiske med, under krisen?", new string[] { "Generalstrejke", "Statskup", "Kommunistisk revolution", "Revolution" }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Hvorfor sagde man at kongen var ved at begå statskup (1920)?", new string[] { "kongen ville genindføre enevældet", "Kongen ville sælge Grønland", "Kongen afsked Zahle regeringen", "Kongen ville i krig" }, 2));
+        _QNA.Add(new QuestionsAndAnswers("Hvad var Zahle regeringens ønske med en ny grænse?", new string[] { "En grænse efter nationalitet", "Danmark til Ejderen", "At Danmark skulle være en del af Tyskland", "At grænsen skulle blive hvor den var" }, 0));
+        _QNA.Add(new QuestionsAndAnswers("Hvad truede de socialdemokratiske med, under krisen?", new string[] { "Generalstrejke", "Statskup", "Kommunistisk revolution", "Revolution" }, 2));
 
 
         // Her henter vi alle komponenterne fra de forskellige objekter.
@@ -89,7 +89,7 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
 
-        setQuestionAndAswers(QNA[Random.Range(0, QNA.Count)]);
+        setQuestionAndAswers(_QNA[Random.Range(0, _QNA.Count)]);
     }
 
     void Update()
@@ -128,7 +128,7 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                setQuestionAndAswers(QNA[Random.Range(0, QNA.Count)]);
+                setQuestionAndAswers(_QNA[Random.Range(0, _QNA.Count)]);
                 _hasAnswered = false;
                 _wait = 0;
             }
@@ -159,12 +159,12 @@ public class QuizManager : MonoBehaviour
     // Sætter spørgsmålet til det som der tilfældigt blevet valgt fra listen, samt sæt alle svarmulighederne til de muligheder der er og sæt "RightAnswer()" metoden på den rigtige og "WrongAnswer()" på den forkerte
     void setQuestionAndAswers(QuestionsAndAnswers qna)
     {
-        _label.text = qna._question;
+        _label.text = qna.Question;
 
 
         for (int i = 0; i < 4; i++)
         {
-            _button[i].text = qna._answers[i];
+            _button[i].text = qna.Answers[i];
             _button[i].clicked -= RightAnswer;
             _button[i].clicked -= WrongAnswer;
 
