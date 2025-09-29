@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using NUnit.Framework.Interfaces;
+using Unity.Mathematics;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -29,6 +31,7 @@ public class QuizManager : MonoBehaviour
     private GameObject _gameOver;
     private GameObject _win;
     private Button _btn;
+    private int _randomIndex;
 
     void Awake()
     {
@@ -83,13 +86,13 @@ public class QuizManager : MonoBehaviour
         _winUI = _win.GetComponent<UIDocument>();
         _quizUI = _quiz.GetComponent<UIDocument>();
         _gameOverUI = _gameOver.GetComponent<UIDocument>();
-        
+
 
     }
     void Start()
     {
-
-        setQuestionAndAswers(_QNA[Random.Range(0, _QNA.Count)]);
+        _randomIndex = UnityEngine.Random.Range(0, _QNA.Count);
+        setQuestionAndAswers(_QNA[_randomIndex]);
     }
 
     void Update()
@@ -128,7 +131,9 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                setQuestionAndAswers(_QNA[Random.Range(0, _QNA.Count)]);
+                ResetColors();
+                _randomIndex = UnityEngine.Random.Range(0, _QNA.Count);
+                setQuestionAndAswers(_QNA[UnityEngine.Random.Range(0, _QNA.Count)]);
                 _hasAnswered = false;
                 _wait = 0;
             }
@@ -144,6 +149,7 @@ public class QuizManager : MonoBehaviour
         Debug.Log(_questionAmount);
         Debug.Log("Rigtigt svar");
         // Make visuals for the player to see if its correct or not
+        setColors();
     }
 
     // Metoden som reagerer på det forkerte svar
@@ -154,6 +160,7 @@ public class QuizManager : MonoBehaviour
         _wrongAnswers++;
         Debug.Log("Forkert svar");
         Debug.Log(_questionAmount);
+        setColors();
         // Make visuals for the player to see if its correct or not
     }
     // Sætter spørgsmålet til det som der tilfældigt blevet valgt fra listen, samt sæt alle svarmulighederne til de muligheder der er og sæt "RightAnswer()" metoden på den rigtige og "WrongAnswer()" på den forkerte
@@ -190,7 +197,7 @@ public class QuizManager : MonoBehaviour
         _btn = _gameOverRoot.Q<Button>("TryAgain");
         _btn.clicked += TryAgain;
         _btn = _gameOverRoot.Q<Button>("MainMenu");
-        _btn.clicked += MainMenu;   
+        _btn.clicked += MainMenu;
     }
     // Metoden der bliver kaldt hvis spilleren vinder runden.
     public void WinGame()
@@ -214,5 +221,27 @@ public class QuizManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void setColors()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == _QNA[_randomIndex].RightAnswerIndex)
+            {
+                _button[i].style.color = Color.green;
+            }
+            else
+            {
+                _button[i].style.color = Color.red;
+            }
+        }
+    }
+    public void ResetColors()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            _button[i].style.color = Color.black;
+        }
     }
 }
