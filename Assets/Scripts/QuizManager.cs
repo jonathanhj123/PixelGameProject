@@ -89,7 +89,6 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
 
-        // setQuestionAndAswers(QNA[Random.Range(0, QNA.Length)]);
         setQuestionAndAswers(QNA[Random.Range(0, QNA.Count)]);
     }
 
@@ -209,12 +208,11 @@ public class QuizManager : MonoBehaviour
     public void TryAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        // Reset scene
+
     }
 
     public void MainMenu()
     {
-        // Load MainMenu scene.
         SceneManager.LoadScene("MainMenu");
     }
 }
