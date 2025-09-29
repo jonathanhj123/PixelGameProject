@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 506aa74a00f2e0141a67223eb841cd30
+guid: aab48586f2fbd5246ac2fab0be15be80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 815440752953288531
-    second: Speech_bubble.svg_0
+      213: -6888756438569675735
+    second: New Piskel (1)_0
+  - first:
+      213: 9173839873224666002
+    second: New Piskel (1)_1
+  - first:
+      213: -745645855993587873
+    second: New Piskel (1)_2
+  - first:
+      213: 4123733795721074919
+    second: New Piskel (1)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Speech_bubble.svg_0
+      name: New Piskel (1)_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 288
-        height: 217
+        x: 1
+        y: 31
+        width: 23
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 357682f5b07015b00800000000000000
-      internalID: 815440752953288531
+      spriteID: 9249ede64883660a0800000000000000
+      internalID: -6888756438569675735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29beed572c6005f70800000000000000
+      internalID: 9173839873224666002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (1)_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5792496b0fe6a5f0800000000000000
+      internalID: -745645855993587873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (1)_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e85a3ae9027a3930800000000000000
+      internalID: 4123733795721074919
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Speech_bubble.svg_0: 815440752953288531
+      New Piskel (1)_0: -6888756438569675735
+      New Piskel (1)_1: 9173839873224666002
+      New Piskel (1)_2: -745645855993587873
+      New Piskel (1)_3: 4123733795721074919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

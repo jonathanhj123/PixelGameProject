@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: c969373d9cd117741bc4653c570f653c
+guid: de0cef7a8639adc40b8f5902b2ab6d8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9103689847138231581
-    second: panel_brown_corners_a_0
+      213: -3657555748428180552
+    second: Granny_0
+  - first:
+      213: -7870152882920918981
+    second: Granny_1
+  - first:
+      213: -7654407655729260425
+    second: Granny_2
+  - first:
+      213: 6678335402301740297
+    second: Granny_3
+  - first:
+      213: 5998845191311661007
+    second: Granny_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 2.8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: panel_brown_corners_a_0
+      name: Granny_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 128
+        x: 4
+        y: 63
+        width: 24
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d15210cbeadc65e70800000000000000
-      internalID: 9103689847138231581
+      spriteID: 8b310c4ec60cd3dc0800000000000000
+      internalID: -3657555748428180552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Granny_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 63
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b307b7d96a997c290800000000000000
+      internalID: -7870152882920918981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Granny_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 31
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7781a3abac416c590800000000000000
+      internalID: -7654407655729260425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Granny_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 31
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9055c114aa63eac50800000000000000
+      internalID: 6678335402301740297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Granny_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc711b21bed204350800000000000000
+      internalID: 5998845191311661007
       vertices: []
       indices: 
       edges: []
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      panel_brown_corners_a_0: 9103689847138231581
+      Granny_0: -3657555748428180552
+      Granny_1: -7870152882920918981
+      Granny_2: -7654407655729260425
+      Granny_3: 6678335402301740297
+      Granny_4: 5998845191311661007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
