@@ -32,6 +32,7 @@ public class QuizManager : MonoBehaviour
     private GameObject _win;
     private Button _btn;
     private int _randomIndex;
+    private Label _score;
 
     void Awake()
     {
@@ -78,6 +79,7 @@ public class QuizManager : MonoBehaviour
         // Her henter vi alle komponenterne fra de forskellige objekter.
         _quizRoot = _quiz.GetComponent<UIDocument>().rootVisualElement;
         _label = _quizRoot.Q<Label>("Question");
+        _score = _quizRoot.Q<Label>("Score");
         _button[0] = _quizRoot.Q<Button>("Answer1");
         _button[1] = _quizRoot.Q<Button>("Answer2");
         _button[2] = _quizRoot.Q<Button>("Answer3");
@@ -86,6 +88,8 @@ public class QuizManager : MonoBehaviour
         _winUI = _win.GetComponent<UIDocument>();
         _quizUI = _quiz.GetComponent<UIDocument>();
         _gameOverUI = _gameOver.GetComponent<UIDocument>();
+
+        _score.text = (_rightAnswers + "/3");
 
 
     }
@@ -134,6 +138,7 @@ public class QuizManager : MonoBehaviour
                 ResetColors();
                 _randomIndex = UnityEngine.Random.Range(0, _QNA.Count);
                 setQuestionAndAswers(_QNA[UnityEngine.Random.Range(0, _QNA.Count)]);
+                _score.text = (_rightAnswers + "/3");
                 _hasAnswered = false;
                 _wait = 0;
             }
@@ -148,7 +153,6 @@ public class QuizManager : MonoBehaviour
         _rightAnswers++;
         Debug.Log(_questionAmount);
         Debug.Log("Rigtigt svar");
-        // Make visuals for the player to see if its correct or not
         setColors();
     }
 
@@ -161,7 +165,6 @@ public class QuizManager : MonoBehaviour
         Debug.Log("Forkert svar");
         Debug.Log(_questionAmount);
         setColors();
-        // Make visuals for the player to see if its correct or not
     }
     // Sætter spørgsmålet til det som der tilfældigt blevet valgt fra listen, samt sæt alle svarmulighederne til de muligheder der er og sæt "RightAnswer()" metoden på den rigtige og "WrongAnswer()" på den forkerte
     void setQuestionAndAswers(QuestionsAndAnswers qna)
