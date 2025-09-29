@@ -1,7 +1,34 @@
 .button {
-    width: 110px;
-    height: 50px;
-    background-image: url("project://database/Assets/ButtonWide-1.png.png?fileID=2800000&guid=aed58c1812fd1804792a723727780cf3&type=3#ButtonWide-1.png");
+    width: 113px;
+    height: 63px;
+    background-image: url("project://database/Assets/sprites/ButtonWide.png?fileID=2800000&guid=67881fac643ea6b4e8961df1e1c8af2f&type=3#ButtonWide");
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    background-size: 100% 160%;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 10px;
+    -unity-font-style: bold;
+    flex-wrap: wrap;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 25px;
+    border-left-width: 20px;
+    flex-basis: auto;
+}
+
+.button:active {
+    width: 113px;
+    height: 63px;
+    background-image: url("project://database/Assets/sprites/ButtonWidePressed.png?fileID=2800000&guid=7518eb5034677214b9c1493a6151a479&type=3#ButtonWidePressed");
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -17,23 +44,9 @@
     padding-top: 8px;
     font-size: 10px;
     -unity-font-style: bold;
-}
-
-.button:active {
-    width: 110px;
-    height: 50px;
-    background-image: url("project://database/Assets/ButtonWidePressed-1.png.png?fileID=2800000&guid=11eb6681fbcd525458cb3bd15d04e8dd&type=3#ButtonWidePressed-1.png");
-    background-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    position: relative;
-    background-size: 100% 160%;
-    padding-bottom: 11px;
-    padding-top: 8px;
+    flex-wrap: wrap;
+    border-top-width: 20px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-left-width: 20px;
 }
