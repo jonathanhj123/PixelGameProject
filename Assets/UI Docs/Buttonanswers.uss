@@ -1,5 +1,5 @@
 .button {
-    width: 113px;
+    width: 115px;
     height: 63px;
     background-image: url("project://database/Assets/sprites/ButtonWide.png?fileID=2800000&guid=67881fac643ea6b4e8961df1e1c8af2f&type=3#ButtonWide");
     background-color: rgba(0, 0, 0, 0);
@@ -13,20 +13,22 @@
     bottom: 0;
     position: relative;
     background-size: 100% 160%;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom: initial;
+    padding-top: initial;
     font-size: 10px;
     -unity-font-style: bold;
     flex-wrap: wrap;
-    border-top-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 25px;
-    border-left-width: 20px;
+    border-top-width: 7px;
+    border-right-width: 8px;
+    border-bottom-width: 17px;
+    border-left-width: 8px;
     flex-basis: auto;
+    padding-left: initial;
+    padding-right: initial;
 }
 
 .button:active {
-    width: 113px;
+    width: 115px;
     height: 63px;
     background-image: url("project://database/Assets/sprites/ButtonWidePressed.png?fileID=2800000&guid=7518eb5034677214b9c1493a6151a479&type=3#ButtonWidePressed");
     background-color: rgba(0, 0, 0, 0);
@@ -40,13 +42,15 @@
     bottom: 0;
     position: relative;
     background-size: 100% 160%;
-    padding-bottom: 11px;
-    padding-top: 8px;
+    padding-bottom: initial;
+    padding-top: initial;
     font-size: 10px;
     -unity-font-style: bold;
     flex-wrap: wrap;
-    border-top-width: 20px;
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-    border-left-width: 20px;
+    border-top-width: 7px;
+    border-right-width: 8px;
+    border-bottom-width: 17px;
+    border-left-width: 8px;
+    padding-right: initial;
+    padding-left: initial;
 }
