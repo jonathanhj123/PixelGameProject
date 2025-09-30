@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-//using UnityEngine.SceneManagement;
-
 public class PlayerController : MonoBehaviour
 {
+
+    //Alt her er bascially unødvendigt, med mindre vi finder en grund til at skulle styre grandma med keyboard:
+
     InputAction moveAction;
     Rigidbody2D rb;
     private float _moveSpeed = 10f;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    //private LevelSelection _currentSelection;
 
     void Start()
     {
@@ -19,11 +19,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        /* Snappy movement
-        Vector2 input = moveAction.ReadValue<Vector2>();
-        rb.linearVelocity = input.normalized * _moveSpeed;
-        */
-
         //Slidey movement
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector2 targetVelocity = input.normalized * _moveSpeed;
@@ -43,26 +38,4 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("IsMoving", false);
         }
     }
-
-/* Level selection detection
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        LevelSelection selection = other.GetComponent<LevelSelection>();
-        if (selection != null)
-        {
-            _currentSelection = selection;
-            Debug.Log("Enter trigger for " + selection.levelToLoad);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        LevelSelection selection = other.GetComponent<LevelSelection>();
-        if (selection == _currentSelection)
-        {
-            _currentSelection = null;
-            Debug.Log("ExitLevelTrigger");
-        }
-    }
-    */
 }
