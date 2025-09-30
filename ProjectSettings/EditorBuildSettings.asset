@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: fdd60f93310f4ee4f991826138bedb46
+  - enabled: 1
+    path: Assets/Scenes/CasinoScene.unity
+    guid: 2b534df4d06d3cc4fb32f0be1decf229
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

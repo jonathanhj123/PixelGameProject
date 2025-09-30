@@ -26,6 +26,6 @@ public class MainMenuLogicManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("QuizScene");   
+        SceneManager.LoadScene("LevelSelect");   
     }
 }
