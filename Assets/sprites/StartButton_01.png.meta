@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0ca1d4ad98e13d04a8434256ee67c182
+guid: 71273b8a18b80ac4d8426eec59f79e61
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6477874363456237101
-    second: Granny-1.png_0
+      213: 4230769667111048988
+    second: StartButton_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Granny-1.png_0
+      name: StartButton_01_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 31
-        width: 706
-        height: 930
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 7
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2e2b6d896806e950800000000000000
-      internalID: 6477874363456237101
+      spriteID: c17d6aeb896b6ba30800000000000000
+      internalID: 4230769667111048988
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 632f0fa6824ad23488b727202cf03bae
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Granny-1.png_0: 6477874363456237101
+      StartButton_01_0: 4230769667111048988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

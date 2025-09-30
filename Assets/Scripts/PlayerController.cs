@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         //Slidey movement
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector2 targetVelocity = input.normalized * _moveSpeed;
-        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, 0.25f);
+        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, targetVelocity, 0.3f);
 
         //Animation Logic
         if (rb.linearVelocity.magnitude > 0.05f)

@@ -8,14 +8,15 @@ public class LevelSelectManager : MonoBehaviour
     private int _maxLevel = 2;
     private int _minLevel = -1;
     private GameObject Player;
-    
+
 
     void Awake()
     {
         Player = GameObject.FindWithTag("Player");
+        Player.transform.position = GameObject.Find("Level_0").transform.position;
     }
 
-    void OnLevelUp()
+    public void OnLevelUp()
     {
         //Increase levelSelection by 1 and update positon of PlayerController
         if (_levelSelection < _maxLevel)
@@ -26,7 +27,7 @@ public class LevelSelectManager : MonoBehaviour
         }
     }
 
-    void OnLevelDown()
+    public void OnLevelDown()
     {
         //Decrease levelSelection by 1 and update positon of PlayerController
         if (_levelSelection > _minLevel)
@@ -37,7 +38,7 @@ public class LevelSelectManager : MonoBehaviour
         }
     }
 
-    void OnInteract()
+    public void OnInteract()
     {
         //Load selected level indicated by _levelSelection
         if (_levelSelection == -1)
