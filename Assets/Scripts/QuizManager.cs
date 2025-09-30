@@ -57,7 +57,6 @@ public class QuizManager : MonoBehaviour
         _QNA.Add(new QuestionsAndAnswers("Hvem var Christian 4. i krig mod i 1625?", new string[] { "Den franske kong", "Den engelske dronning", "Greven af Venedig", "Den tysk-romersk kejser" }, 3));
 
         // Statskuppet 1660
-        _QNA.Add(new QuestionsAndAnswers("Hvad var en af årsagerne til at de gejstlige og borgerne forslog statskuppet (1660)?", new string[] { "De var træt af kongens magt", "De vil selv havde magten", "De ville give magten til svenskerne", "De var trætte af rigsrådets magt og af adlens mange privilegier" }, 3));
         _QNA.Add(new QuestionsAndAnswers("Hvilken styreform overgik Danmark til efter statskuppet (1660)?", new string[] { "Demokrati", "Enevælde", "Diktatur", "Adelsvælde" }, 1));
         _QNA.Add(new QuestionsAndAnswers("Hvilken konge var med til statskuppet?", new string[] { "Christian 5.", "Valdemar Atterdag", "Frederik 3.", "Christian 4." }, 2));
         _QNA.Add(new QuestionsAndAnswers("Efter svenskekrigene 1657-1660, hvilket områder mistede Danmark-Norge?", new string[] { "Skåne, Halland og Blekinge", "Slesvig-Holsten", "De dansk vestindiske øer", "Norge" }, 0));
@@ -66,13 +65,10 @@ public class QuizManager : MonoBehaviour
         // Grundloven
         _QNA.Add(new QuestionsAndAnswers("Hvilken kong underskrev grundloven?", new string[] { "Frederik 7.", "Christian 7.", "Christian 5.", "Frederik 6." }, 0));
         _QNA.Add(new QuestionsAndAnswers("Hvem havde stemmeret i forhold til Grundloven fra 1849?", new string[] { "Mænd og kvinder", "Alle mænd", "Mænd over 30 år", "Adlen" }, 2));
-        _QNA.Add(new QuestionsAndAnswers("Ved indførelsen af grundloven var der en gruppe der ikke kunne stemme også kendt som de 5 f'er, Fruentimmere (kvinder), forbryder, folkehold (tjenestefolk og almuen) og fattige, hvad hed den sidste?", new string[] { "Fremmede", "Fængslede", "Forskere", "Fjollede" }, 3));
         _QNA.Add(new QuestionsAndAnswers("Hvor stor procentdel af den danske befolkning kunne stemme i 1849?", new string[] { "34%", "14%", "12%", "8%" }, 1));
         _QNA.Add(new QuestionsAndAnswers("Hvilken af disse rettigheder fik danskerne i 1849?", new string[] { "Abort frihed", "Forsamlingsfrihed", "Kvinders stemmeret", "Stemmeret til 18 år" }, 1));
 
         // Genforeningen / Påskekrisen
-        _QNA.Add(new QuestionsAndAnswers("Hvorfor sagde man at kongen var ved at begå statskup (1920)?", new string[] { "kongen ville genindføre enevældet", "Kongen ville sælge Grønland", "Kongen afsked Zahle regeringen", "Kongen ville i krig" }, 2));
-        _QNA.Add(new QuestionsAndAnswers("Hvad var Zahle regeringens ønske med en ny grænse?", new string[] { "En grænse efter nationalitet", "Danmark til Ejderen", "At Danmark skulle være en del af Tyskland", "At grænsen skulle blive hvor den var" }, 0));
         _QNA.Add(new QuestionsAndAnswers("Hvad truede de socialdemokratiske med, under krisen?", new string[] { "Generalstrejke", "Statskup", "Kommunistisk revolution", "Revolution" }, 2));
 
 

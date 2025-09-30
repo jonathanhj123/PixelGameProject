@@ -8,6 +8,8 @@ public class LevelSelectManager : MonoBehaviour
     private int _maxLevel = 2;
     private int _minLevel = -1;
     private GameObject Player;
+    private GameObject SelectedLevel;
+    private bool isMoving = false;
 
 
     void Awake()
@@ -22,8 +24,7 @@ public class LevelSelectManager : MonoBehaviour
         if (_levelSelection < _maxLevel)
         {
             _levelSelection++;
-            GameObject NextLevel = GameObject.Find("Level_" + _levelSelection.ToString());
-            Player.transform.position = NextLevel.transform.position;
+            isMoving = true;
         }
     }
 
@@ -33,11 +34,24 @@ public class LevelSelectManager : MonoBehaviour
         if (_levelSelection > _minLevel)
         {
             _levelSelection--;
-            GameObject PreviousLevel = GameObject.Find("Level_" + _levelSelection.ToString());
-            Player.transform.position = PreviousLevel.transform.position;
+            isMoving = true;
         }
     }
 
+    void Update()
+    {
+        while (isMoving)
+        {
+            SelectedLevel = GameObject.Find("Level_" + _levelSelection.ToString());
+            Player.transform.position = Vector2.Lerp(Player.transform.position, SelectedLevel.transform.position, 0.01f);
+
+            if (Player.transform.position == SelectedLevel.transform.position)
+            {
+                isMoving = false;
+            }
+        }
+
+    }
     public void OnInteract()
     {
         //Load selected level indicated by _levelSelection
