@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Docs/Buttonanswers.uss?fileID=7433441132597879392&amp;guid=64d05e8cc9ddbad438b89de018cfe6fa&amp;type=3#Buttonanswers" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label display-tooltip-when-elided="true" name="Card" style="left: 107px; top: 73px; width: 124px; background-image: url(&quot;project://database/Assets/sprites/King%20of%20hearts%202.png?fileID=2800000&amp;guid=9f44e3e433266e44eacb0b5e51e20d22&amp;type=3#King%20of%20hearts%202&quot;); height: 144px;" />
+    </ui:VisualElement>
+    <ui:GroupBox name="GroupBox" style="flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: auto; align-self: center; width: 321px; align-items: flex-start; border-bottom-width: 61px; top: 46px; -unity-text-align: upper-center;">
+        <ui:Button text="Svar 1" name="Answer1" class="button" style="white-space: normal;" />
+        <ui:Button text="Svar 2" name="Answer2" class="button" style="white-space: normal;" />
+        <ui:Button text="Svar 3" name="Answer3" class="button" style="white-space: normal;" />
+        <ui:Button text="Svar 4" name="Answer4" class="button" style="white-space: normal;" />
+    </ui:GroupBox>
+</ui:UXML>

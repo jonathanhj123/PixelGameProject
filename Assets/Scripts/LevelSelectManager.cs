@@ -49,7 +49,7 @@ public class LevelSelectManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("QuizScene");
+            SceneManager.LoadScene("QuizStartScene");
         }
     }
 
