@@ -336,11 +336,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f498cb6157f51234793409f89629ac66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cards:
-  - {fileID: -863499575880570904, guid: 0f07e909336920043b93e1be7471c4ea, type: 3}
-  - {fileID: -8182641209570964270, guid: 9f44e3e433266e44eacb0b5e51e20d22, type: 3}
-  - {fileID: -5077643396690291831, guid: 93f699def09e0784983ec4c08c4f9e29, type: 3}
-  - {fileID: -2279635580685580953, guid: 82fff9335b7193f4b9b6745bafa01b44, type: 3}
+  Cards:
+  - {fileID: 3956660604982387340, guid: acbf256d31b8da04eb106d5743118d6b, type: 3}
+  - {fileID: 5817556690654762982, guid: c20fc5c4373c3f44aa7999846515c279, type: 3}
+  - {fileID: -3459287960106941657, guid: 1b358405ad73c15439a4ad5bb53beefb, type: 3}
+  - {fileID: -5870555579475319883, guid: a31c8e4c94f53b24181919071f369a20, type: 3}
+  _timer: 1
+  _CardBack: {fileID: -4020737972417413384, guid: 191eb6b2bf4ab3b479f90a136ab23caa, type: 3}
 --- !u!4 &1617784963
 Transform:
   m_ObjectHideFlags: 0

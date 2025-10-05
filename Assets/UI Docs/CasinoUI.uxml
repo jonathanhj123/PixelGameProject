@@ -1,9 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Docs/Buttonanswers.uss?fileID=7433441132597879392&amp;guid=64d05e8cc9ddbad438b89de018cfe6fa&amp;type=3#Buttonanswers" />
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label display-tooltip-when-elided="true" name="Card" style="left: 107px; top: 73px; width: 124px; background-image: url(&quot;project://database/Assets/sprites/King%20of%20hearts%202.png?fileID=2800000&amp;guid=9f44e3e433266e44eacb0b5e51e20d22&amp;type=3#King%20of%20hearts%202&quot;); height: 144px;" />
-    </ui:VisualElement>
-    <ui:GroupBox name="GroupBox" style="flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: auto; align-self: center; width: 321px; align-items: flex-start; border-bottom-width: 61px; top: 46px; -unity-text-align: upper-center;">
+    <ui:GroupBox style="align-content: flex-end; align-items: flex-start; white-space: normal; text-overflow: clip; -unity-text-align: upper-left; align-self: auto; flex-direction: row; bottom: auto; justify-content: space-between; height: 56px; top: 5%;">
+        <ui:Label text="Label" name="HighScore" style="align-content: auto; bottom: auto; align-self: flex-start; align-items: flex-start;" />
+        <ui:Label text="Label" name="Score" style="height: 25px; bottom: auto; left: auto; align-self: auto; justify-content: flex-start; align-items: flex-end; align-content: flex-start; -unity-text-align: upper-left; white-space: nowrap;" />
+    </ui:GroupBox>
+    <ui:Label display-tooltip-when-elided="true" name="Card" style="left: auto; top: 10%; width: 124px; background-image: url(&quot;project://database/Assets/sprites/CardBack_01.png?fileID=2800000&amp;guid=191eb6b2bf4ab3b479f90a136ab23caa&amp;type=3#CardBack_01&quot;); height: 144px; align-self: center; align-content: auto; align-items: flex-end; justify-content: space-evenly;" />
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:GroupBox name="GroupBox" style="flex-direction: row; flex-wrap: wrap; justify-content: center; align-content: auto; align-self: center; width: 321px; align-items: flex-start; border-bottom-width: 61px; top: auto; -unity-text-align: upper-center;">
         <ui:Button text="Svar 1" name="Answer1" class="button" style="white-space: normal;" />
         <ui:Button text="Svar 2" name="Answer2" class="button" style="white-space: normal;" />
         <ui:Button text="Svar 3" name="Answer3" class="button" style="white-space: normal;" />

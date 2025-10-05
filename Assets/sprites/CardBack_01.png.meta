@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9f44e3e433266e44eacb0b5e51e20d22
+guid: 191eb6b2bf4ab3b479f90a136ab23caa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8182641209570964270
-    second: King%20of%20hearts%202_0
+      213: -4020737972417413384
+    second: CardBack_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: King%20of%20hearts%202_0
+      name: CardBack_01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 352
-        height: 352
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dccc036c2b617e80800000000000000
-      internalID: -8182641209570964270
+      spriteID: 8feb22bed187338c0800000000000000
+      internalID: -4020737972417413384
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      King%20of%20hearts%202_0: -8182641209570964270
+      CardBack_01_0: -4020737972417413384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
