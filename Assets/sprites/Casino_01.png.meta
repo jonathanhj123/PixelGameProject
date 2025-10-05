@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c20fc5c4373c3f44aa7999846515c279
+guid: adda0602adcce774ba1b96e3f3cf4630
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5817556690654762982
-    second: KingHearts_01_0
+      213: 8047915156143486495
+    second: Casino_01 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KingHearts_01_0
+      name: Casino_01 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e79c27ccfc1cb050800000000000000
-      internalID: 5817556690654762982
+      spriteID: f163a60e130ffaf60800000000000000
+      internalID: 8047915156143486495
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KingHearts_01_0: 5817556690654762982
+      Casino_01 1_0: 8047915156143486495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

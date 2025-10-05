@@ -1,7 +1,10 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;" />
-    <ui:Label text="Main Menu" style="flex-wrap: wrap; align-items: auto; align-self: center; align-content: auto; justify-content: center; top: -316px; font-size: 36px;" />
-    <ui:GroupBox style="bottom: 227px;">
-        <ui:Button text="Start Game" name="StartButton" style="font-size: 30px;" />
+    <ui:VisualElement style="flex-grow: 0.1;" />
+    <ui:VisualElement style="flex-grow: initial;">
+        <ui:Label style="background-image: url(&quot;project://database/Assets/sprites/Main_20Menu.png?fileID=-1547267277&amp;guid=15fc0dc0b3167e44faaab2bc84f6ec74&amp;type=3#Main_20Menu_8&quot;); background-size: contain; height: 130px; -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 0.7; background-image: url(&quot;project://database/Assets/sprites/Pixel_20crown_20_281_29.png?fileID=6333463808463983139&amp;guid=3cc74caa32b60fa42b15ba4c991b267f&amp;type=3#Pixel_20crown_20_281_29_0&quot;); background-size: contain;" />
+    <ui:GroupBox style="flex-direction: column;">
+        <ui:Button name="StartButton" enabled="true" icon-image="project://database/Assets/sprites/Play.png?fileID=1106353952&amp;guid=b9cc76e6fbe8a774db93d06446f7cdbb&amp;type=3#Play_4" style="-unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(209, 162, 0);" />
     </ui:GroupBox>
 </ui:UXML>
