@@ -133,7 +133,7 @@ public class QuizManager : MonoBehaviour
             {
                 ResetColors();
                 _randomIndex = UnityEngine.Random.Range(0, _QNA.Count);
-                setQuestionAndAswers(_QNA[UnityEngine.Random.Range(0, _QNA.Count)]);
+                setQuestionAndAswers(_QNA[_randomIndex]);
                 _score.text = (_rightAnswers + "/3");
                 _hasAnswered = false;
                 _wait = 0;
@@ -144,23 +144,22 @@ public class QuizManager : MonoBehaviour
     // Metoden som reagerer på det rigtige svar
     public void RightAnswer()
     {
+        setColors();
         _questionAmount++;
-        _hasAnswered = true;
         _rightAnswers++;
         Debug.Log(_questionAmount);
         Debug.Log("Rigtigt svar");
-        setColors();
     }
 
     // Metoden som reagerer på det forkerte svar
     public void WrongAnswer()
     {
+        setColors();
         _questionAmount++;
-        _hasAnswered = true;
         _wrongAnswers++;
         Debug.Log("Forkert svar");
         Debug.Log(_questionAmount);
-        setColors();
+
     }
     // Sætter spørgsmålet til det som der tilfældigt blevet valgt fra listen, samt sæt alle svarmulighederne til de muligheder der er og sæt "RightAnswer()" metoden på den rigtige og "WrongAnswer()" på den forkerte
     void setQuestionAndAswers(QuestionsAndAnswers qna)
@@ -184,6 +183,7 @@ public class QuizManager : MonoBehaviour
                 _button[i].clicked += WrongAnswer;
             }
         }
+        Debug.Log("setQNA right index : " + qna.RightAnswerIndex);
     }
 
     // Metoden der bliver kaldt hvis det er spilleren har 2 forkerte svar.
@@ -235,6 +235,8 @@ public class QuizManager : MonoBehaviour
                 _button[i].style.color = Color.red;
             }
         }
+        Debug.Log("setColors Righ index : " + _QNA[_randomIndex].RightAnswerIndex);
+        _hasAnswered = true;
     }
     public void ResetColors()
     {
