@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7518eb5034677214b9c1493a6151a479
+guid: d84adad1c46f9864d833d8d5a2b30823
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1466248476842827744
-    second: ButtonWidePressed_0
+      213: -3610095120206083174
+    second: ArrowUp_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonWidePressed_0
+      name: ArrowUp_01_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 14
-        width: 64
-        height: 31
+        x: 2
+        y: 2
+        width: 12
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 020635167c6d6abe0800000000000000
-      internalID: -1466248476842827744
+      spriteID: a9bceb28d9d56edc0800000000000000
+      internalID: -3610095120206083174
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e9a20603f0d8f3e429b18c65f6c83632
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ButtonWidePressed_0: -1466248476842827744
+      ArrowUp_01_0: -3610095120206083174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

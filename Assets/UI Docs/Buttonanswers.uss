@@ -15,8 +15,8 @@
     background-size: 100% 160%;
     padding-bottom: initial;
     padding-top: initial;
-    font-size: 10px;
-    -unity-font-style: bold;
+    font-size: 21px;
+    -unity-font-style: normal;
     flex-wrap: wrap;
     border-top-width: 7px;
     border-right-width: 8px;
@@ -25,6 +25,8 @@
     flex-basis: auto;
     padding-left: initial;
     padding-right: initial;
+    -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Pixel.ttf?fileID=12800000&guid=53fd13668532e2f429b7f0e7ad2b3589&type=3#Kenney Pixel");
+    text-shadow: 0 0 0 rgb(0, 0, 0);
 }
 
 .button:active {
@@ -44,13 +46,24 @@
     background-size: 100% 160%;
     padding-bottom: initial;
     padding-top: initial;
-    font-size: 10px;
-    -unity-font-style: bold;
+    font-size: 21px;
+    -unity-font-style: normal;
     flex-wrap: wrap;
-    border-top-width: 7px;
+    border-top-width: 14px;
     border-right-width: 8px;
-    border-bottom-width: 17px;
+    border-bottom-width: 9px;
     border-left-width: 8px;
     padding-right: initial;
     padding-left: initial;
+    -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Pixel.ttf?fileID=12800000&guid=53fd13668532e2f429b7f0e7ad2b3589&type=3#Kenney Pixel");
+}
+
+.generictext {
+    -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Pixel.ttf?fileID=12800000&guid=53fd13668532e2f429b7f0e7ad2b3589&type=3#Kenney Pixel");
+    font-size: 32px;
+    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 0 rgb(0, 0, 0);
 }
