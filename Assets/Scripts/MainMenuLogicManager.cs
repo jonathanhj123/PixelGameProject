@@ -9,7 +9,8 @@ public class MainMenuLogicManager : MonoBehaviour
     private Button _startBTN;
 
     public AudioSource _audioSource;
-    [SerializeField] private AudioClip BGMusic;
+    [SerializeField] private AudioClip _BGMusic;
+    [SerializeField] private AudioClip _buttonClick;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class MainMenuLogicManager : MonoBehaviour
         _startBTN = _mainMenuUIRoot.Q<Button>("StartButton");
         _startBTN.clicked += StartGame;
 
-        _audioSource.PlayOneShot(BGMusic, 0.5f);
+        _audioSource.PlayOneShot(_BGMusic, 0.5f);
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class MainMenuLogicManager : MonoBehaviour
 
     public void StartGame()
     {
+        _audioSource.PlayOneShot(_buttonClick, 0.5f);
         SceneManager.LoadScene("LevelSelect");   
     }
 }

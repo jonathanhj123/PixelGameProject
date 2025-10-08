@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1378337702ce9b24687e189b5f1e6581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioAmbience: {fileID: 1696346112}
+  _audioCasinoAmbience: {fileID: 1696346112}
   BGMusic: {fileID: 8300000, guid: 7c3fcbcfb0ef9c24f8d4edd3b52a1c10, type: 3}
   Ambience: {fileID: 8300000, guid: 0282eff5231f5db47bb34b7bed335e8d, type: 3}
 --- !u!4 &380035338

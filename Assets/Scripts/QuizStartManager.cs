@@ -7,6 +7,8 @@ public class QuizStartManager : MonoBehaviour
     private UIDocument _quizUI;
     private VisualElement _quizRoot;
     private Button _btn;
+    public AudioSource _audioSource;
+    [SerializeField] private AudioClip _buttonClick;
 
     void Awake()
     {
@@ -18,6 +20,7 @@ public class QuizStartManager : MonoBehaviour
 
     public void QuizScene()
     {
+        _audioSource.PlayOneShot(_buttonClick, 0.5f);
         SceneManager.LoadScene("QuizScene");
     }
 
