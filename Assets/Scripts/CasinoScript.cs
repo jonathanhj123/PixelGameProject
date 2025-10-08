@@ -19,6 +19,11 @@ public class CasinoScript : MonoBehaviour
     [SerializeField] public int _timer = 1;
     [SerializeField] private Sprite _CardBack;
 
+    //Audio variables
+    public AudioSource _audioFX;
+    [SerializeField] private AudioClip BigMoney;
+    [SerializeField] private AudioClip CardFlip;
+
     void Start()
     {
 
@@ -43,6 +48,9 @@ public class CasinoScript : MonoBehaviour
 
 
         SetAnswerAndCard();
+
+
+        
     }
 
 
@@ -97,6 +105,11 @@ public class CasinoScript : MonoBehaviour
         setColors();
         _HasAnswered = true;
         _Card.style.backgroundImage = Background.FromSprite(Cards[_Random]);
+
+        //Play audio fx with random pitch
+        _audioFX.pitch = Random.Range(0.7f, 1.3f);
+        _audioFX.PlayOneShot(BigMoney, 0.5f);
+        _audioFX.PlayOneShot(CardFlip, 1.5f);
     }
 
     public void WrongAnswer()
@@ -112,6 +125,10 @@ public class CasinoScript : MonoBehaviour
         _Card.style.backgroundImage = Background.FromSprite(Cards[_Random]);
         _Score = 0;
         UpdateScore();
+
+        //Play audio fx with random pitch
+        _audioFX.pitch = Random.Range(0.7f, 1.3f);
+        _audioFX.PlayOneShot(CardFlip, 1.5f);
     }
 
 

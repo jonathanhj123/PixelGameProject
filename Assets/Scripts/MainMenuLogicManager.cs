@@ -4,11 +4,13 @@ using UnityEngine.UIElements;
 
 public class MainMenuLogicManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     private GameObject _mainMenuUI;
     private VisualElement _mainMenuUIRoot;
     private Button _startBTN;
+
+    public AudioSource _audioSource;
+    [SerializeField] private AudioClip BGMusic;
+
     void Start()
     {
         _mainMenuUI = GameObject.FindWithTag("MainMenuUI");
@@ -16,6 +18,8 @@ public class MainMenuLogicManager : MonoBehaviour
 
         _startBTN = _mainMenuUIRoot.Q<Button>("StartButton");
         _startBTN.clicked += StartGame;
+
+        _audioSource.PlayOneShot(BGMusic, 0.5f);
     }
 
     // Update is called once per frame

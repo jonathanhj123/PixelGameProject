@@ -33,6 +33,12 @@ public class QuizManager : MonoBehaviour
     private Button _btn;
     private int _randomIndex;
     private Label _score;
+    //Audio variables
+    public AudioSource _audioSource;
+    [SerializeField] private AudioClip RightAnswerSFX;
+    [SerializeField] private AudioClip WrongAnswerSFX;
+    [SerializeField] private AudioClip GameOverSFX;
+    [SerializeField] private AudioClip WinSFX;
 
     void Awake()
     {
@@ -86,6 +92,8 @@ public class QuizManager : MonoBehaviour
         _gameOverUI = _gameOver.GetComponent<UIDocument>();
 
         _score.text = (_rightAnswers + "/3");
+
+        
 
 
     }
@@ -149,6 +157,7 @@ public class QuizManager : MonoBehaviour
         _rightAnswers++;
         Debug.Log(_questionAmount);
         Debug.Log("Rigtigt svar");
+        _audioSource.PlayOneShot(RightAnswerSFX, 0.5f);
     }
 
     // Metoden som reagerer på det forkerte svar
@@ -159,6 +168,7 @@ public class QuizManager : MonoBehaviour
         _wrongAnswers++;
         Debug.Log("Forkert svar");
         Debug.Log(_questionAmount);
+        _audioSource.PlayOneShot(WrongAnswerSFX, 0.5f);
 
     }
     // Sætter spørgsmålet til det som der tilfældigt blevet valgt fra listen, samt sæt alle svarmulighederne til de muligheder der er og sæt "RightAnswer()" metoden på den rigtige og "WrongAnswer()" på den forkerte
@@ -197,6 +207,7 @@ public class QuizManager : MonoBehaviour
         _btn.clicked += TryAgain;
         _btn = _gameOverRoot.Q<Button>("MainMenu");
         _btn.clicked += MainMenu;
+        _audioSource.PlayOneShot(GameOverSFX, 0.5f);
     }
     // Metoden der bliver kaldt hvis spilleren vinder runden.
     public void WinGame()
@@ -209,6 +220,7 @@ public class QuizManager : MonoBehaviour
         _btn.clicked += MainMenu;
         _btn = _winRoot.Q<Button>("MainMenu");
         _btn.clicked += MainMenu;
+        _audioSource.PlayOneShot(WinSFX, 0.5f);
     }
 
     public void TryAgain()
