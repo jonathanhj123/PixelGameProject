@@ -200,7 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1139281119}
-  BGMusic: {fileID: 8300000, guid: 4d0cc96335bd81240bec258eb2db325f, type: 3}
+  _BGMusic: {fileID: 8300000, guid: 4d0cc96335bd81240bec258eb2db325f, type: 3}
+  _buttonClick: {fileID: 8300000, guid: dd027ee1da3f1c647ae8b460c1de8dad, type: 3}
 --- !u!4 &715665655
 Transform:
   m_ObjectHideFlags: 0

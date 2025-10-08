@@ -9,6 +9,9 @@ public class LevelSelectManager : MonoBehaviour
     private int _minLevel = -1;
     private GameObject Player;
 
+    public AudioSource _audioSource;
+    [SerializeField] private AudioClip _buttonClick;
+
 
     void Awake()
     {
@@ -18,7 +21,9 @@ public class LevelSelectManager : MonoBehaviour
 
     public void OnLevelUp()
     {
-        //Increase levelSelection by 1 and update positon of PlayerController
+        //Increase levelSelection by 1 and update positon of PlayerController + Play sound
+        _audioSource.pitch = Random.Range(0.8f, 1.2f);
+        _audioSource.PlayOneShot(_buttonClick, 0.5f);
         if (_levelSelection < _maxLevel)
         {
             _levelSelection++;
@@ -30,7 +35,9 @@ public class LevelSelectManager : MonoBehaviour
 
     public void OnLevelDown()
     {
-        //Decrease levelSelection by 1 and update positon of PlayerController
+        //Decrease levelSelection by 1 and update positon of PlayerController + Play sound
+        _audioSource.pitch = Random.Range(0.8f, 1.2f);
+        _audioSource.PlayOneShot(_buttonClick, 0.5f);
         if (_levelSelection > _minLevel)
         {
             _levelSelection--;
@@ -42,7 +49,9 @@ public class LevelSelectManager : MonoBehaviour
    
     public void OnInteract()
     {
-        //Load selected level indicated by _levelSelection
+        //Load selected level indicated by _levelSelection + play sound
+        _audioSource.pitch = Random.Range(0.8f, 1.2f);
+        _audioSource.PlayOneShot(_buttonClick, 0.5f);
         if (_levelSelection == -1)
         {
             SceneManager.LoadScene("CasinoScene");
