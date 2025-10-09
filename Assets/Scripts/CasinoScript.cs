@@ -46,7 +46,7 @@ public class CasinoScript : MonoBehaviour
         _buttons[0].text = "Es";
         _buttons[1].text = "Konge";
         _buttons[2].text = "Dame";
-        _buttons[3].text = "Bonde";
+        _buttons[3].text = "Knægt";
 
 
         SetAnswerAndCard();
