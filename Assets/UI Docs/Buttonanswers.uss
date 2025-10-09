@@ -1,7 +1,7 @@
 .button {
-    width: 115px;
-    height: 63px;
-    background-image: url("project://database/Assets/sprites/ButtonWide.png?fileID=2800000&guid=67881fac643ea6b4e8961df1e1c8af2f&type=3#ButtonWide");
+    width: 120px;
+    height: 75px;
+    background-image: url("project://database/Assets/sprites/ButtonOff_01.png?fileID=2800000&guid=7dd829a5c14f92f4eb08637733704db8&type=3#ButtonOff_01");
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -12,13 +12,13 @@
     right: 0;
     bottom: 0;
     position: relative;
-    background-size: 100% 160%;
+    background-size: 105% 160%;
     padding-bottom: initial;
     padding-top: initial;
     font-size: 21px;
     -unity-font-style: normal;
     flex-wrap: wrap;
-    border-top-width: 7px;
+    border-top-width: 0;
     border-right-width: 8px;
     border-bottom-width: 17px;
     border-left-width: 8px;
@@ -27,12 +27,15 @@
     padding-right: initial;
     -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Pixel.ttf?fileID=12800000&guid=53fd13668532e2f429b7f0e7ad2b3589&type=3#Kenney Pixel");
     text-shadow: 0 0 0 rgb(0, 0, 0);
+    margin-top: -14px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
 
 .button:active {
-    width: 115px;
-    height: 63px;
-    background-image: url("project://database/Assets/sprites/ButtonWidePressed.png?fileID=2800000&guid=7518eb5034677214b9c1493a6151a479&type=3#ButtonWidePressed");
+    width: 120px;
+    height: 75px;
+    background-image: url("project://database/Assets/sprites/ButtonOn_01.png?fileID=2800000&guid=510ed09b42348a646825cf08a14e2f21&type=3#ButtonOn_01");
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -43,19 +46,24 @@
     right: 0;
     bottom: 0;
     position: relative;
-    background-size: 100% 160%;
+    background-size: 105% 160%;
     padding-bottom: initial;
     padding-top: initial;
     font-size: 21px;
     -unity-font-style: normal;
     flex-wrap: wrap;
-    border-top-width: 14px;
+    border-top-width: 0;
     border-right-width: 8px;
-    border-bottom-width: 9px;
+    border-bottom-width: 17px;
     border-left-width: 8px;
-    padding-right: initial;
+    flex-basis: auto;
     padding-left: initial;
+    padding-right: initial;
     -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Pixel.ttf?fileID=12800000&guid=53fd13668532e2f429b7f0e7ad2b3589&type=3#Kenney Pixel");
+    text-shadow: 0 0 0 rgb(0, 0, 0);
+    margin-top: -14px;
+    margin-left: -2px;
+    margin-right: -2px;
 }
 
 .generictext {
