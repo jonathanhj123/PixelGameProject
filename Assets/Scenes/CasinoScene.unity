@@ -917,6 +917,7 @@ MonoBehaviour:
   _audioFX: {fileID: 1187460213}
   BigMoney: {fileID: 8300000, guid: 6878a1b730d6dcd41ac31c137c4e7452, type: 3}
   CardFlip: {fileID: 8300000, guid: 87f99cc0b86f2e043b33fc028f2f9579, type: 3}
+  _buttonClick: {fileID: 8300000, guid: dd027ee1da3f1c647ae8b460c1de8dad, type: 3}
 --- !u!4 &1617784963
 Transform:
   m_ObjectHideFlags: 0

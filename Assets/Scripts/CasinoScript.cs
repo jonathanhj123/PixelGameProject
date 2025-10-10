@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,6 +7,7 @@ public class CasinoScript : MonoBehaviour
 {
     private Label _Card;
     private VisualElement _casinoUIRoot;
+    private Button _backButton;
     private Button[] _buttons = new Button[4];
     [SerializeField] private Sprite[] Cards = new Sprite[4]; // 0 = Es, 1 = Konge, 2 = Dame, 3 = Bonde.
     private int _Score = 0;
@@ -22,6 +24,7 @@ public class CasinoScript : MonoBehaviour
     public AudioSource _audioFX;
     [SerializeField] private AudioClip BigMoney;
     [SerializeField] private AudioClip CardFlip;
+    [SerializeField] private AudioClip _buttonClick;
 
     void Start()
     {
@@ -43,15 +46,23 @@ public class CasinoScript : MonoBehaviour
         _buttons[0].text = "Es";
         _buttons[1].text = "Konge";
         _buttons[2].text = "Dame";
-        _buttons[3].text = "Bonde";
+        _buttons[3].text = "Knægt";
 
 
         SetAnswerAndCard();
+
+        _backButton = _casinoUIRoot.Q<Button>("BackButton");
+        _backButton.clicked += LevelSelect;
 
 
         
     }
 
+    void LevelSelect()
+    {
+        _audioFX.PlayOneShot(_buttonClick, 0.5f);
+        SceneManager.LoadScene("LevelSelect");   
+    }
 
     void Update()
     {
